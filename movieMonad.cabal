@@ -1,0 +1,55 @@
+name:                movieMonad
+version:             0.1.0.0
+synopsis:            Desktop video player.
+description:         Please see README.md
+homepage:            https://github.com/lettier/moviemonad
+license:             Apache
+license-file:        LICENSE
+author:              David Lettier
+copyright:           2016 David Lettier
+category:            Desktop
+build-type:          Simple
+cabal-version:       >=1.10
+
+executable movieMonadCss
+  hs-source-dirs:       src/css
+  main-is:              Main.hs
+  default-language:     Haskell2010
+  build-depends:        base >= 4.7 && < 5
+                      , clay
+
+executable movieMonadHtml
+  hs-source-dirs:       src/html
+  main-is:              Main.hs
+  default-language:     Haskell2010
+  build-depends:        base >= 4.7 && < 5
+                      , blaze-html
+
+executable movieMonadJs
+  hs-source-dirs:       src/js
+  main-is:              Main.hs
+  default-language:     Haskell2010
+  build-depends:        base >= 4.7 && < 5
+                      , cpphs
+                      , fay
+                      , fay-base
+                      , fay-builder
+                      , fay-dom
+                      , fay-jquery
+                      , fay-text
+                      , fay-uri
+                      , hlint
+
+executable movieMonadElectronBoot
+  hs-source-dirs:       src/electronBoot
+  main-is:              Main.hs
+  default-language:     Haskell2010
+  build-depends:        base >= 4.7 && < 5
+                      , cpphs
+                      , fay
+                      , fay-base
+                      , fay-builder
+                      , fay-dom
+                      , fay-jquery
+                      , fay-text
+                      , fay-uri
